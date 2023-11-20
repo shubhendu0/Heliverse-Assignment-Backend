@@ -4,7 +4,6 @@ connectDb();
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const cookieParser = require("cookie-parser");
 const userRoute = require("./routes/userRoutes");
 const teamRoute = require("./routes/teamRoutes");
 
@@ -13,7 +12,6 @@ const app = express();
 // Middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
 app.use(bodyParser.json());
 
 app.use(
